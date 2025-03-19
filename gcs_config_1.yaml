@@ -1,0 +1,48 @@
+---
+categorical_features:
+  - proto
+  - service
+  - conn_state
+  - history
+filepaths:
+- gs://cloud_example_bucket/CTU-IoT-Malware-Capture-1-1conn.log.labeled.csv
+- gs://cloud_example_bucket/CTU-IoT-Malware-Capture-3-1conn.log.labeled.csv
+- gs://cloud_example_bucket/CTU-IoT-Malware-Capture-8-1conn.log.labeled.csv
+- gs://cloud_example_bucket/CTU-IoT-Malware-Capture-20-1conn.log.labeled.csv
+- gs://cloud_example_bucket/CTU-IoT-Malware-Capture-21-1conn.log.labeled.csv
+- gs://cloud_example_bucket/CTU-IoT-Malware-Capture-34-1conn.log.labeled.csv
+- gs://cloud_example_bucket/CTU-IoT-Malware-Capture-42-1conn.log.labeled.csv
+- gs://cloud_example_bucket/CTU-IoT-Malware-Capture-44-1conn.log.labeled.csv
+#- gs://mangonet_bucket/iot_malware/CTU-IoT-Malware-Capture-1-1conn.log.labeled.csv
+#  - gs://iot-data-demo/CTU-IoT-Malware-Capture-1-1conn.log.labeled.csv
+  # - gs://iot-data-demo/CTU-IoT-Malware-Capture-3-1conn.log.labeled.csv
+  # - gs://iot-data-demo/CTU-IoT-Malware-Capture-20-1conn.log.labeled.csv
+  # - gs://iot-data-demo/CTU-IoT-Malware-Capture-21-1conn.log.labeled.csv
+  # - gs://iot-data-demo/CTU-IoT-Malware-Capture-34-1conn.log.labeled.csv
+  # - gs://iot-data-demo/CTU-IoT-Malware-Capture-35-1conn.log.labeled.csv
+  # - gs://iot-data-demo/CTU-IoT-Malware-Capture-42-1conn.log.labeled.csv
+  # - gs://iot-data-demo/CTU-IoT-Malware-Capture-44-1conn.log.labeled.csv
+model_output_path: gs://cloud_example_bucket/best_pipeline_large_data
+na_fill_vals:
+  conn_state: missing
+  duration: -999999
+  history: missing
+  orig_bytes: -999999
+  orig_ip_bytes: -999999
+  orig_pkts: -999999
+  proto: missing
+  resp_bytes: -999999
+  resp_ip_bytes: -999999
+  resp_pkts: -999999
+  service: missing
+numerical_features:
+  - duration
+  - orig_bytes
+  - resp_bytes
+  - missed_bytes
+  - orig_pkts
+  - orig_ip_bytes
+  - resp_pkts
+  - resp_ip_bytes
+random_split: true
+tuning_rounds: 0

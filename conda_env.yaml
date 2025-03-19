@@ -1,0 +1,10 @@
+---
+dependencies:
+  - python=3.10
+  - pyyaml=6.0.1
+  - mmh3==4.0.1
+  - numpy==1.26.2
+  - pandas==2.0.3
+  - pyspark==3.5.0
+  - hyperopt==0.2.7
+name: iot
